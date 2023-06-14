@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 1</title>
+<script src="https://cdn.tailwindcss.com"></script>  
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+</style>
+</head>
+<body class=" flex flex-col md:flex-row justify-center items-center h-screen w-screen bg-no-repeat bg-contain bg-[url(./interactive-card-form/imágenes/bg-main-mobile.png)] md:bg-[url(./interactive-card-form/imágenes/bg-main-desktop.png)]">  
+      <div class="container_cards w-[270px] top-[-20px]  md:w-[30%] md:h-[50%] relative md:right-[100px]">
+        <div class="flex absolute top-[-90px]">
+            <img class="flex z-30 absolute mt-[10px] ml-[10px] md:mt-10 md:ml-10" src="./interactive-card-form/imágenes/card-logo.svg" alt="logomaster">
+            <img class="z-20" src="./interactive-card-form/imágenes/bg-card-front.png" alt="card-front">
+            <span class="text-white text-[1rem] md:text-4xl z-30 fixed mt-[85px] ml-[10px] md:mt-[130px] md:mx-[30px]">9591 6489 6389 101E</span>
+            <span class="text-white text-sm md:text-2xl z-30 font-thin  fixed mt-[115px] ml-[10px] md:mt-[190px] md:mx-[20px]">Your Name</span>
+            <span class="text-white text-sm md:text-2xl z-30 font-thin fixed mt-[115px] ml-[190px] md:mt-[190px] md:ml-[350px]">01/23</span>            
+        </div>
+        <div class=" flex relative bottom-[174px] left-[30px] md:left-20 md:top-[180px]">
+            <img src="./interactive-card-form/imágenes/bg-card-back.png" alt="card-back">
+            <span class="text-white z-10 md:text-2xl font-thin relative right-[68px] top-[60px] md:top-[100px]  md:right-[95px]">000</span>
+        </div>
+      </div>
+      <form class="container-form w-[90%] md:w-[30%] grid grid-cols-4 grid-rows-7 [&>input]:outline-violet-900 [&>input]:border [&>input]:h-10 [&>input]:w-[100%] [&>input]:justify-center [&>input]:items-center  [&>input]:border-violetbg-violet-900 [&>input]: [&>input]:rounded-l gap-1" border-black" >            
+                <label class="col-span-4" for="cardholder-name">CARDHOLDER NAME:</label>
+                <input class="hover:border-red-500 col-span-4" type="text" id="cardholder-name" name="cardholder-name"  required>             
+                <label class="col-span-4" for="card-number">CARD NUMBER:</label>     
+                <input class="hover:border-red-500 col-span-4" type="number" id="card-number" name="card-number" required>  
+            
+                <label class="col-span-1" for="expiration-date">EXP DATE </label>
+                <span class="col-span-1">(MM/YY):</span>
+                <label class="col-span-2" for="cvc">CVC:</label>  
+                                
+                    <input class="hover:border-red-500 col-span-1" type="number w-[20%]" id="expiration-month" name="expiration-month" required> 
+                    <input class="hover:border-red-500 col-span-1" type="number" id="expiration-year" name="expiration-year" required>     
+                    <input class="hover:border-red-500 col-span-2" type="text"  id="cvc" name="cvc" required placeholder="000"
+                    minlength="3"
+                    maxlength="3"                
+                    pattern="[0-9]{3}">      
+                    <button class="h-15% w-30% col-span-4 text-white bg-violet-900 rounded-l" type="submit" maxlength="" value="Confirm">Confirm</button>           
+      </form>
+</body>
+</html>
